@@ -15,13 +15,19 @@
 为了保证不出错，下面的操作均需要在Linux系统下面执行。而且已经安装了git命令。
 
 ### 1. 注册 Heroku 帐号
+
 Heroku 提供免费账号，部分介绍如下：
 
 512 MB RAM per dyno
+
 Free apps sleep automatically after 30 mins of inactivity to conserve your dyno hours
+
 Free apps wake automatically when a web request is received
+
 https://devcenter.heroku.com/articles/limits
+
 https://devcenter.heroku.com/articles/free-dyno-hours#usage
+
 注册地址：https://signup.heroku.com/ （注册和部署过程可能需要梯子）
 
 ### 2.安装heroku-cli
@@ -36,7 +42,7 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 一键安装命令：
 
-`curl -L | bash`
+`curl -L https://raw.githubusercontent.com/snail007/goproxy-heroku/master/deploy.sh | bash`
 
 执行成功之后，会输出一个你的heroku APP的https访问地址，这个地址就是goproxy sps功能连接的地址，ws密码是pass。
 
