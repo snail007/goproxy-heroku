@@ -36,9 +36,11 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 ### 3.本地登录heroku
 
-当步骤1和2完成之后，你本地应该可以直接执行heroku命令，执行`heroku status`检查是否登录。
+当步骤1和2完成之后，你本地应该可以直接执行heroku命令，执行`heroku login`完成登录，`heroku status`检查是否登录。
 
 ### 4.部署goproxy到heroku
+
+务必保证前面1、2、3、步骤都已经正确完成，不然这里是不能成功的。
 
 一键安装命令：
 
