@@ -22,11 +22,11 @@
 
 （3）点击：Deploy app
 
-<img src="/doc/1.png" width="500px" height="400px">
+<img src="/doc/1.png" width="500px" height="auto">
 
 4、执行完成以后，这是就完成了部署。
 
-<img src="/doc/2.png" width="500px" height="400px">
+<img src="/doc/2.png" width="500px" height="auto">
 
 二、在客户端上执行
 
@@ -58,7 +58,7 @@
 
 2、选择New -> Create new app
 
-<img src="/doc/2.2.png" width="500px" height="400px">
+<img src="/doc/2.2.png" width="500px" height="auto">
 
 3、执行以下三个步骤，见下图：
 
@@ -68,21 +68,21 @@
 
 （3）点击：Create app
 
-<img src="/doc/2.3.png" width="500px" height="400px">
+<img src="/doc/2.3.png" width="500px" height="auto">
 
 选择Deploy->GitHub Connect to github
 
-<img src="/doc/2.4.png" width="500px" height="400px">
+<img src="/doc/2.4.png" width="500px" height="auto">
 
 4、连接到自己的github，搜索goproxy-heroku项目，点击连接Connect
 
-<img src="/doc/2.5.png" width="500px" height="400px">
+<img src="/doc/2.5.png" width="500px" height="auto">
 
 5、手动部署Manual deploy -> Deploy Branch， 部署成功。
 
-<img src="/doc/2.6.png" width="500px" height="400px">
+<img src="/doc/2.6.png" width="500px" height="auto">
 <br>
-<img src="/doc/2.7.png" width="500px" height="400px">
+<img src="/doc/2.7.png" width="500px" height="auto">
 
 三、在客户端上执行（默认不修改代码）
 
