@@ -47,9 +47,27 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 二、在客户端上执行
 
+独立goproxy客户端：
+
 `proxy.exe http -t tcp -p :6600 -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000`
 
 在浏览器上设置代理：127.0.0.1:6600   http
+
+安卓客户端：
+
+安卓 [goproxy-ss-plugin](https://github.com/snail007/goproxy-ss-plugin-android) 插件配置可以写：
+
+主机：test2-goproxy.herokuapp.com
+
+端口：443
+
+加密方法：aes-256-cfb
+
+密码：123
+
+插件参数：
+
+`-S http -j 123 -h aes-256-cfb -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000`
 
 注意：本次部署中需要调整的就是`test1-goproxy`改为你自己的名称。
 
@@ -103,8 +121,26 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 三、在客户端上执行（默认不修改代码）
 
+独立goproxy客户端：
+
 `proxy.exe http -t tcp -p :6600 -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000`
 
-四、在浏览器上设置代理：127.0.0.1:6600   http
+在浏览器上设置代理：127.0.0.1:6600   http
+
+安卓客户端：
+
+goproxy-ss-plugin 插件配置可以写：
+
+主机：test2-goproxy.herokuapp.com
+
+端口：443
+
+加密方法：aes-256-cfb
+
+密码：123
+
+插件参数：
+
+`-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000`
 
 注意：本次部署中需要修改test2-goproxy为你自己的名称。
