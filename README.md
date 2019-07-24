@@ -142,7 +142,6 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 插件参数：
 ```
-
 `-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000`
 
 注意：本次部署中需要修改test2-goproxy为你自己的名称。
