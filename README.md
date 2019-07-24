@@ -107,3 +107,4 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 四、在浏览器上设置代理：127.0.0.1:6600   http
 
+注意：本次部署中需要修改test2-goproxy为你自己的名称。
