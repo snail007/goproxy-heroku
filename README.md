@@ -129,8 +129,9 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 安卓客户端：
 
-goproxy-ss-plugin 插件配置可以写：
+安卓 [goproxy-ss-plugin](https://github.com/snail007/goproxy-ss-plugin-android) 插件配置可以写：
 
+```text
 主机：test2-goproxy.herokuapp.com
 
 端口：443
@@ -141,6 +142,7 @@ goproxy-ss-plugin 插件配置可以写：
 
 插件参数：
 
-`-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000`
+<b>-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</b>
+```
 
 注意：本次部署中需要修改test2-goproxy为你自己的名称。
