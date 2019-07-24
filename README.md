@@ -2,53 +2,91 @@
 
 ### Heroku 是一个支持多种编程语言的云平台即服务，gorpxoy-heroku 则是可部署在 Heroku 平台的 gorpxoy 服务。gorpxoy-heroku 使用的 WebSocket 代替原本的 sockets 作为底层传输。
 
-### 如果遇到问题
+下面的部署方法，前提是你已经拥有一个heroku账号。
 
-请先检查是否遵循步骤（再次阅读一遍教程）
+## 部署方法一（简单）
 
-请先自行通过Google/Github寻找答案
+本方法为快速部署。
 
-如果还没有解决，欢迎通过 issue 提问（贴日志和配置的时候注意隐藏密码&个人ip）
+一、在heroku上的部署
 
-## 准备
+1、登陆https://dashboard.heroku.com/login
 
-为了保证不出错，下面的操作均需要在Linux系统下面执行。而且已经安装了git命令。
+2、登陆好后，在浏览器地址栏输入https://heroku.com/deploy?template=https://github.com/snail007/goproxy-heroku
 
-### 1. 注册 Heroku 帐号
+3、执行以下三个步骤，见下图：
 
-Heroku 提供免费账号，部分介绍如下：
+（1）输入App name.例如`test1-goproxy`
 
-512 MB RAM per dyno
+（2）Choose a region:选择一个.例如United States
 
-Free apps sleep automatically after 30 mins of inactivity to conserve your dyno hours
+（3）点击：Deploy app
 
-Free apps wake automatically when a web request is received
+<img src="/doc/1.png" width="500px" height="400px">
 
-https://devcenter.heroku.com/articles/limits
+4、执行完成以后，这是就完成了部署。
 
-https://devcenter.heroku.com/articles/free-dyno-hours#usage
+<img src="/doc/2.png" width="500px" height="400px">
 
-注册地址：https://signup.heroku.com/ （注册和部署过程可能需要梯子）
+二、在客户端上执行
 
-### 2.安装heroku-cli
+`proxy.exe http -t tcp -p :6600 -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000`
 
-官方参考地址：https://devcenter.heroku.com/articles/heroku-cli
+在浏览器上设置代理：127.0.0.1:6600   http
 
-### 3.本地登录heroku
+注意：本次部署中需要调整的就是`test1-goproxy`改为你自己的名称。
 
-当步骤1和2完成之后，你本地应该可以直接执行heroku命令，执行`heroku login`完成登录，`heroku status`检查是否登录。
+## 部署方法二
 
-### 4.部署goproxy到heroku
+该方法相对方法一步骤多一些，但是可以自己设置加密密码，修改启动参数。
 
-务必保证前面1、2、3、步骤都已经正确完成，不然这里是不能成功的。
+本方法是fork项目后，可以修改相关的参数，再在heroku上部署。
 
-一键安装命令：
+一、在github上fork该项目并修改相关参数
 
-`curl -L https://raw.githubusercontent.com/snail007/goproxy-heroku/master/deploy.sh | bash`
+（1）fork项目：https://github.com/snail007/goproxy-heroku
 
-执行成功之后，会输出一个你的heroku APP的https访问地址，这个地址就是goproxy sps功能连接的地址，ws密码是pass。
+（2）修改配置参数，具体就是修改bootstrap里的内容，点击该文件
 
+<img src="/doc/2.1.png" width="500px" height="auto">
 
+修改第7行内容，详细参考：https://snail007.github.io/goproxy/posts/http_cdn_ws/
 
+二、在heroku上部署
 
+1、登陆https://dashboard.heroku.com/apps
+
+2、选择New -> Create new app
+
+<img src="/doc/2.2.png" width="500px" height="400px">
+
+3、执行以下三个步骤，见下图：
+
+（1）输入App name.例如`test2-goproxy`
+
+（2）Choose a region:选择一个.例如United States
+
+（3）点击：Create app
+
+<img src="/doc/2.3.png" width="500px" height="400px">
+
+选择Deploy->GitHub Connect to github
+
+<img src="/doc/2.4.png" width="500px" height="400px">
+
+4、连接到自己的github，搜索goproxy-heroku项目，点击连接Connect
+
+<img src="/doc/2.5.png" width="500px" height="400px">
+
+5、手动部署Manual deploy -> Deploy Branch， 部署成功。
+
+<img src="/doc/2.6.png" width="500px" height="400px">
+<br>
+<img src="/doc/2.7.png" width="500px" height="400px">
+
+三、在客户端上执行（默认不修改代码）
+
+`proxy.exe http -t tcp -p :6600 -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000`
+
+四、在浏览器上设置代理：127.0.0.1:6600   http
 
