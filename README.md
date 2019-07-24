@@ -58,7 +58,7 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 安卓 [goproxy-ss-plugin](https://github.com/snail007/goproxy-ss-plugin-android) 插件配置可以写：
 
 ```text
-主机：test2-goproxy.herokuapp.com
+主机：test1-goproxy.herokuapp.com
 
 端口：443
 
