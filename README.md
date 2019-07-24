@@ -2,7 +2,24 @@
 
 ### Heroku 是一个支持多种编程语言的云平台即服务，gorpxoy-heroku 则是可部署在 Heroku 平台的 gorpxoy 服务。gorpxoy-heroku 使用的 WebSocket 代替原本的 sockets 作为底层传输。
 
-下面的部署方法，前提是你已经拥有一个heroku账号。
+#### 下面的部署方法，前提是你已经拥有一个heroku账号。
+
+1. 注册 Heroku 帐号
+
+Heroku 提供免费账号，部分介绍如下：
+
+512 MB RAM per dyno
+
+Free apps sleep automatically after 30 mins of inactivity to conserve your dyno hours
+
+Free apps wake automatically when a web request is received
+
+https://devcenter.heroku.com/articles/limits
+
+https://devcenter.heroku.com/articles/free-dyno-hours#usage
+
+注册地址：https://signup.heroku.com/ （注册和部署过程可能需要梯子）
+
 
 ## 部署方法一（简单）
 
