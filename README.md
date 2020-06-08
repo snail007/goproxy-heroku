@@ -29,7 +29,9 @@ https://devcenter.heroku.com/articles/free-dyno-hours#usage
 
 1、登陆https://dashboard.heroku.com/login
 
-2、登陆好后，在浏览器地址栏输入https://heroku.com/deploy?template=https://github.com/snail007/goproxy-heroku
+2、登陆好后，点击
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/snail007/goproxy-heroku)
 
 3、执行以下三个步骤，见下图：
 
